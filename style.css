@@ -1,0 +1,181 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff7f9; 
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #ffccd5); /* pastel pink gradient */
+  border-bottom: 2px solid #ffcad4;
+}
+
+.profile-container {
+  animation: fadeDown 1.5s ease;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ffb3c6;
+  box-shadow: 0 4px 15px rgba(255, 179, 198, 0.5);
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-size: 2.2rem;
+  color: #353233; 
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 1.2rem;
+  color: #5f5e5e;
+  letter-spacing: 1px;
+}
+
+/* Navigation */
+nav {
+  background: #ffe6ec; 
+  padding: 0.8rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ff6f91;
+  font-weight: 600;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  color: #ff3f6c;
+  transform: scale(1.1);
+}
+
+/* Sections */
+.section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(255, 170, 200, 0.15);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section h2 {
+  color: #ff6f91;
+  margin-bottom: 1rem;
+  border-left: 5px solid #ffb3c6;
+  padding-left: 0.6rem;
+  font-size: 1.5rem;
+}
+
+.section p, 
+.section li {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Skills */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.skills-list li {
+  background: #ffe6ec;
+  color: #ff3f6c;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(255, 111, 145, 0.2);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.skills-list li:hover {
+  transform: scale(1.1);
+  background: #ffd6e0;
+}
+
+/* Education */
+.education-item {
+  margin-bottom: 1.5rem;
+}
+
+.education-item h3 {
+  color: #ff6f91;
+  font-size: 1.2rem;
+}
+
+.education-item p {
+  margin-top: 0.3rem;
+}
+
+/* Contact */
+#contact a {
+  color: #ff6f91;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #ffd6e0;
+  color: #444;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  border-top: 2px solid #ffb3c6;
+}
+
+/* Animations */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
